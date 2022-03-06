@@ -6,7 +6,10 @@ function DisplayUser({ ...props }) {
     return (
         <div>
             {userList.map(user => {
-                return <h1 key={user.id}>{user.name}</h1>
+                return <div key={user.id}>
+                    <h1 >{user.name}</h1>
+                    <h3>{user.username}</h3>
+                </div>
             })}
         </div>
     );
