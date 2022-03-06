@@ -7,10 +7,12 @@ export const userSlice = createSlice({
     initialState: { value: FAKE_DATA },
     reducers: {
         addUser: (state, action) => {
-            //write code for adding a user 
+            state.value.push(action.payload)
         },
 
     }
 });
+
+export const {addUser} = userSlice.actions;
 
 export default userSlice.reducer;
