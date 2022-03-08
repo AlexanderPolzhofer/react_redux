@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { DisplayUsersDiv } from '../App.styles';
+import { Button, DisplayUsersDiv } from '../App.styles';
 
 function DisplayUser({ ...props }) {
     const { userList } = props;
@@ -13,6 +13,14 @@ function DisplayUser({ ...props }) {
                     <h3>{user.username}</h3>
                 </DisplayUsersDiv>
             ))}
+            <form>
+                <input
+                    type='text'
+                    placeholder='change username ...'
+                />
+            </form>
+            <Button>CHANGE USERNAME</Button>
+            <Button>DELETE USER</Button>
         </div >
 
 

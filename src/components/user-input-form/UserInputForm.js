@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import { Button } from '../App.styles';
+
 function UserInputForm(props) {
 
     const [name, setName] = useState('');
@@ -21,7 +23,7 @@ function UserInputForm(props) {
                 placeholder="Username ..."
                 onChange={event => setUsername(event.target.value)}
             />
-            <button type='submit'>ADD USER</button>
+            <Button type='submit'>ADD USER</Button>
         </form>
     );
 }
