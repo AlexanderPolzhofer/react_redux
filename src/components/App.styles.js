@@ -10,8 +10,8 @@ text-align: center;
 `;
 
 export const DisplayUsersDiv = styled.div`
-width: 400px;
-height: 150px;
+width: 440px;
+height: 180px;
 padding: 21px;
 margin: 21px;
 border-radius: 8px;
