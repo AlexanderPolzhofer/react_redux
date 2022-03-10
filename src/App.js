@@ -26,6 +26,7 @@ function App() {
 
   return (
     <AppContainer>
+      <u><h1>CRUD OPERATIONS</h1></u>
       <UserInputForm handleSubmit={handleSubmit} />
       <DisplayUser
         userList={userList}

@@ -10,13 +10,21 @@ text-align: center;
 `;
 
 export const DisplayUsersDiv = styled.div`
-width: 440px;
-height: 180px;
+width: 450px;
+height: 210px;
 padding: 21px;
 margin: 21px;
 border-radius: 8px;
 box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1), 0 8px 21px 0 rgba(0,0,0,0.1);
 text-align: center;
+`;
+
+export const UserLayout = styled.div`
+display: flex;
+justify-conten: center;
+align-items: center;
+flex-direction: column;
+margin: 3px auto;
 `;
 
 export const Button = styled.button`
