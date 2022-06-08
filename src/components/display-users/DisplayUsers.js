@@ -5,20 +5,20 @@ import { useDispatch } from "react-redux";
 import { Button, DisplayUsersDiv, UserLayout } from '../App.styles';
 import { deleteUser, updateUsername } from '../../features/Users';
 
-function DisplayUser({ ...props }) {
+const DisplayUser = ({ userList }) => {
 
     const [newUsername, setNewUsername] = useState();
-    const { userList } = props;
     const dispatch = useDispatch();
 
     return (
         <div>
             {userList.map(user => {
+                const { name, username, id } = user;
                 return (
-                    < DisplayUsersDiv key={user.id} >
+                    < DisplayUsersDiv key={id} >
                         <UserLayout>
-                            <h1 >{user.name}</h1>
-                            <h3 >{user.username}</h3>
+                            <h1 >{name}</h1>
+                            <h3 >{username}</h3>
                             <form onClick={event => event.preventDefault()}>
                                 <input
                                     type='text'
@@ -26,11 +26,11 @@ function DisplayUser({ ...props }) {
                                     onChange={event => setNewUsername(event.target.value)}
                                 />
                                 <Button onClick={() => dispatch(updateUsername({
-                                    id: user.id,
+                                    id,
                                     username: newUsername
                                 }))}>CHANGE USERNAME</Button>
                                 <Button onClick={() => {
-                                    dispatch(deleteUser({ id: user.id }))
+                                    dispatch(deleteUser({ id }))
                                 }}>DELETE USER</Button>
                             </form>
                         </UserLayout>

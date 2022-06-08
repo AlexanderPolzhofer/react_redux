@@ -10,10 +10,12 @@ import DisplayUser from "./components/display-users/DisplayUsers";
 import UserInputForm from "./components/user-input-form/UserInputForm";
 
 
-function App() {
+const App = () => {
 
   const dispatch = useDispatch();
   const userList = useSelector((state) => state.users.value)
+
+  console.log(userList)
 
   const handleSubmit = (e, name, username) => {
     e.preventDefault();
